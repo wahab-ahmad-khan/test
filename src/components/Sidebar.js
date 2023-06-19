@@ -8,7 +8,9 @@ import Project from "../assets/Projects.svg";
 import User from "../assets/user.png";
 
 const SideBar = () => {
-	const [sidebar, setSidebar] = useState(true);
+	const [sidebar, setSidebar] = useState(
+		window.innerWidth <= 1000 ? false : true
+	);
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 
 	const showSidebar = () => setSidebar(!sidebar);
