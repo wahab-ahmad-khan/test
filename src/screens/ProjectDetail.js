@@ -92,6 +92,7 @@ const ProjectDetail = () => {
 				elements[0].classList.remove(`image-marker__${animationKey - 1}`);
 			}
 		}
+		// eslint-disable-next-line
 	}, [previousSelectedFile]);
 	const CustomMarker = () => {
 		return (
