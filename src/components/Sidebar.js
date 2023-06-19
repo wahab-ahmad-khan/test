@@ -21,7 +21,9 @@ const SideBar = () => {
 	useEffect(() => {
 		window.addEventListener("resize", updateWindowDimensions);
 	});
-
+	useEffect(() => {
+		updateWindowDimensions();
+	}, []);
 	const ref = useRef();
 	const clickRef = useRef();
 	useEffect(() => {
