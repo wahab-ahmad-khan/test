@@ -1,0 +1,167 @@
+@import "./variables.scss";
+@import "./login.scss";
+@import "./sidebar.scss";
+@import "./projectDetails.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Jura";
+}
+
+//----------------- browser scrollbar code ---------------------------------------------
+
+::-webkit-scrollbar {
+	width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: $fields-border-color; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $lite-black; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 1px solid $lite-black; /* creates padding around scroll thumb */
+}
+
+//-----------------Common Classes---------------------------
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	background-color: $main-background;
+}
+// -- Lite Black Color Class --
+.lite-black {
+	color: $lite-black;
+}
+// -- Button Class --
+.btn {
+	min-width: 149px;
+	min-height: 50px;
+	font-size: $f-16;
+	background-color: $lite-black;
+	color: $white;
+	border-radius: 6px;
+	padding: 5px 12px;
+	cursor: pointer;
+	&:hover {
+		color: $white;
+	}
+	&:focus {
+		box-shadow: none;
+	}
+	&:focus-visible {
+		box-shadow: none;
+	}
+	&:disabled{
+		cursor: not-allowed;
+	}
+}
+//----------Inner Wrapper=----------------
+.inner-wrapper {
+	border-radius: 6px;
+	box-shadow: $box-shadow;
+}
+//-------------Search Bar=---------------------
+.search-bar {
+	max-width: 248px;
+	width: 100%;
+	input[type="text"] {
+		height: 50px;
+		padding: 10px;
+		max-width: 346px;
+		width: 100%;
+		border: 1px solid $fields-border-color;
+		border-radius: 6px;
+		font-size: $f-16;
+		color: $opacity-text-color;
+		padding-left: 35px;
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+		&:focus-visible {
+			box-shadow: none;
+			outline: none;
+		}
+	}
+
+	.search-icon {
+		position: absolute;
+		margin-top: 14px;
+		margin-left: 10px;
+	}
+
+	.fa-search {
+		color: $opacity-text-color;
+		font-size: $f-16;
+	}
+}
+
+//---------- floating-label fields class ---------------
+.floating-label-textfield {
+	position: relative;
+	max-width: 346px;
+	margin: 0 auto;
+	width: 100%;
+	label {
+		position: absolute;
+		font-size: $f-16;
+		left: 0;
+		top: 47%;
+		transform: translateY(-50%);
+		background-color: $white;
+		color: $opacity-text-color;
+		font-weight: 500;
+		padding: 0 0.5rem;
+		margin: 0 0.7rem;
+		transition: 0.1s ease-out;
+		transform-origin: left top;
+		pointer-events: none;
+	}
+	input {
+		font-size: $f-16;
+		outline: none;
+		border: 1px solid $fields-border-color;
+		border-radius: 7px;
+		padding: 0.6rem 1rem;
+		color: $opacity-text-color;
+		transition: 0.1s ease-out;
+		width: 100%;
+		height: 50px;
+		background-color: transparent;
+	}
+	input:focus {
+		border-color: 1px solid $fields-border-color;
+	}
+	input:focus + label {
+		color: $opacity-text-color;
+		top: 0;
+		transform: translateY(-50%) scale(0.9);
+	}
+	input:not(:placeholder-shown) + label {
+		top: 0;
+		transform: translateY(-50%) scale(0.9);
+	}
+}
+.details-fields {
+	max-width: 100% !important;
+	width: 100% !important;
+	label {
+		background-color: $main-background !important;
+		color: $lite-black !important;
+	}
+	input {
+		color: $lite-black !important;
+	}
+}
+.max-width-overRide {
+	max-width: 443px !important;
+}
+
+//--------Cursor pointer-----------------
+.cpointer {
+	cursor: pointer;
+}

@@ -1,0 +1,245 @@
+.header-details {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	height: 68px;
+	font-size: $f-18;
+	color: $lite-black;
+	font-weight: 600;
+}
+//----------Image upload styling-----------------------------------
+.dropzone-upload-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	outline: none !important;
+
+	& * {
+		outline: none !important;
+	}
+
+	.dropzone-inner-wrapper {
+		padding: 10px;
+		cursor: pointer;
+		text-align: center;
+		color: darkgray;
+		display: flex;
+		min-height: 147px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: 1px dashed $fields-border-color;
+		border-radius: 6px;
+		max-width: 480px;
+		width: 100%;
+		margin: 0 auto;
+		.browse-text {
+			font-size: $f-16;
+			color: $lite-black;
+		}
+		.btn-pill {
+			background-color: transparent;
+			border: 0px solid transparent;
+			padding: 0px !important;
+			margin: 0px !important;
+			text-decoration: underline;
+			font-size: $f-16;
+			color: $lite-black;
+			font-weight: 600;
+			&:hover {
+				text-decoration: underline;
+				color: $lite-black;
+				border: 0px solid transparent !important;
+			}
+			&:active {
+				color: #34c7ff;
+				border: 0px solid transparent !important;
+				background-color: transparent !important;
+			}
+			&:focus {
+				border: 0px solid transparent !important;
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+//------------------------- back btn styling ----------------------------
+
+.back-btn {
+	background-color: transparent;
+	border: 0px solid transparent;
+	color: $lite-black;
+	font-weight: 600;
+
+	&:focus {
+		box-shadow: none;
+		border: none;
+		outline: none;
+	}
+	&:focus-visible {
+		box-shadow: none;
+		border: none;
+		outline: none;
+	}
+}
+
+//---------------- Block Heading ------------------------
+
+.block-heading {
+	font-size: $f-18;
+	color: $lite-black;
+	font-weight: 600;
+}
+
+//-------------- Uploaded Images Wrapper ---------------------
+.uploaded-images-wrapper {
+	max-width: 90%;
+}
+// ----------------- Image Viewer in big size ----------------
+.image-viewer {
+	min-height: 570px;
+}
+//--------------- Italic no image found ---------------------
+.italic-not-found {
+	font-style: italic;
+	color: $lite-black;
+	opacity: 0.5;
+	font-size: $f-12;
+}
+.list-image-wrapper {
+	height: 790px;
+	overflow-y: auto;
+}
+
+//------ Images list section name/icons styling --------------------
+.images-name {
+	font-size: $f-18;
+	color: $lite-black;
+}
+.bin {
+	width: 15px;
+	height: 15px;
+}
+
+// ----------------- Checkbox for selecting image from list --------------------
+
+.checkbox-container {
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+.checkbox-container input[type="checkbox"] {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+	background-color: #17a7e5;
+	border: 2px solid #17a7e5;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	background-color: transparent;
+	border: 2px solid #5b5e6c;
+	border-radius: 50%;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+	left: 4px;
+	top: 2px;
+	width: 4px;
+	height: 8px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark:after {
+	display: block;
+}
+
+.checkbox-container:hover .checkmark {
+	background-color: transparent;
+}
+
+//-------------- Selected-box ---------------------------
+
+.selected-box {
+	border: 3px solid #17a8e6;
+	border-radius: 6px;
+	padding: 7px;
+}
+.unselected-box {
+	padding: 7px;
+}
+
+//------------- Add/Remove Pin----------------------
+.add-remove-btn {
+	color: $lite-black;
+	font-size: $f-18;
+	background-color: transparent;
+	border: none;
+	&:focus-visible {
+		box-shadow: none;
+		outline: none;
+	}
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+// ------------------- Comment Details Text ----------------------------------
+.comment-detail-wrapper {
+	border-radius: 6px;
+	background-color: $white;
+	min-height: 50px;
+	max-width: 730px;
+	padding: 4px 10px;
+	box-shadow: 0px 0px 10px #00000017;
+	.comment-content {
+		font-size: $f-18;
+		color: $lite-black;
+	}
+}
+
+//--------------- Pin Transitions ---------------------------------------
+
+.pin-transition-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.pin-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.pin-transition-exit {
+  opacity: 1;
+}
+
+.pin-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+// .image-marker__marker{
+// 	animation-name: example;
+// 	 animation-duration: 2s;
+// }
+// @keyframes example {
+//   from {top: 20%; left: 10%}
+//   to {top: 40%; left: 50%}
+// }

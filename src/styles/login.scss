@@ -1,0 +1,30 @@
+.login-form {
+	max-width: 548px;
+	width: 100%;
+	min-height: 567px;
+	background-color: $white;
+	box-shadow: $box-shadow;
+	border-radius: 6px;
+	padding: 10px;
+	.login-fields-wrapper {
+		max-width: 346px;
+		width: 100%;
+		.login-heading {
+			font-size: $login-heading-font;
+			font-weight: 700;
+		}
+	}
+}
+.secondary-heading {
+	color: $opacity-text-color;
+	font-size: $f-16;
+}
+
+@media screen and (max-width: 767px) {
+	.min-sm-vh-40 {
+		min-height: 40vh !important;
+	}
+	.min-sm-vh-60 {
+		min-height: 60vh !important;
+	}
+}
