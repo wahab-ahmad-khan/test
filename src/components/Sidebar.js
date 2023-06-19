@@ -15,7 +15,8 @@ const SideBar = () => {
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
 	const updateWindowDimensions = () => {
-		window.innerWidth <= 1000 ? setSidebar(false) : setSidebar(true);
+		window.innerWidth <= 1000 && setSidebar(false);
+		window.innerWidth > 1000 && setSidebar(true);
 	};
 
 	useEffect(() => {
